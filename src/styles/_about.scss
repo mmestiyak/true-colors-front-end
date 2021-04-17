@@ -3,3 +3,10 @@
   margin-top: 10%;
   padding: 30px 30px;
 }
+
+@media (max-width: 768px) {
+  .about-card {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}

@@ -20,7 +20,10 @@ const Testimonials = () => {
 
   return (
     <>
-      <section className="section section-testimonials is-large">
+      <section
+        id="testimonials"
+        className="section section-testimonials is-large"
+      >
         <h2 className="title mb-6 has-text-centered is-uppercase	has-text-left-mobile	">
           What our <span className="has-text-primary">clients</span> says
         </h2>

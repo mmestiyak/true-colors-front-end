@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useHistory } from "react-router";
+import { useServices } from "../contexts/ServicesContext";
 import { arrayBufferToBase64 } from "../util";
-const Service = ({ title, description, image }) => {
+import { useAuth } from "../contexts/AuthContext";
+const Service = ({ title, description, image, id }) => {
+  const { setSelectedServiceId } = useServices();
+  const history = useHistory();
+  const { currentUser } = useAuth();
+  const [isAdmin, setIsAdmin] = useState(null);
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await axios.post(
+          "http://localhost:8888/admins/checkIsAdmin",
+          { email: currentUser.email }
+        );
+        setIsAdmin(response.data);
+      } catch (err) {
+        console.log(err);
+      }
+    })();
+  }, []);
   return (
     <div
-      style={{ height: "100%" }}
-      className="column is-one-third
-
+      onClick={() => {
+        if (!isAdmin) {
+          setSelectedServiceId(id);
+          history.push("/dashboard");
+        }
+      }}
+      className="column is-one-third is-clickable	
 "
     >
       <div className="card is-flex  is-flex-direction-column is-align-items-center p-5">

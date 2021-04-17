@@ -7,7 +7,7 @@ import Service from "./Service";
 const Services = () => {
   const { services } = useServices();
   return (
-    <div className="section is-medium">
+    <div id="services" className="section is-medium">
       <h2 className="title mb-6 has-text-centered is-uppercase	has-text-left-mobile	">
         our <span className="has-text-primary">services</span>
       </h2>
@@ -19,6 +19,7 @@ const Services = () => {
                 title={service.title}
                 description={service.description}
                 image={service.image}
+                id={service._id}
               />
             ))}
           </div>

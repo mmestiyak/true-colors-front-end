@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import axios from "axios";
 import { firebaseConfig } from "../firebaseConfig";
 import firebase from "firebase";
 import { useHistory, useLocation } from "react-router-dom";
@@ -15,13 +16,14 @@ export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState();
   let history = useHistory();
   let location = useLocation();
-  let { from } = location.state || { from: { pathname: "/" } };
+  let { from } = location.state || { from: { pathname: "/dashboard" } };
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       setCurrentUser(user);
       history.replace(from);
     });
   }, []);
+
   const login = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(provider);

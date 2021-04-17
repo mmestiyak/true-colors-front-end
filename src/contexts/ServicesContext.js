@@ -4,7 +4,8 @@ const ServicesContext = createContext();
 export const useServices = () => useContext(ServicesContext);
 export const ServicesProvider = ({ children }) => {
   const [services, setServices] = useState();
-  const [servicesUpdated, setServicesUpdated] = useState(0);
+  const [setServicesUpdated] = useState(true);
+  const [selectedServiceId, setSelectedServiceId] = useState();
   useEffect(() => {
     (async () => {
       try {
@@ -14,10 +15,12 @@ export const ServicesProvider = ({ children }) => {
         console.log(err);
       }
     })();
-  }, [servicesUpdated]);
+  }, [services]);
 
   const value = {
     services,
+    selectedServiceId,
+    setSelectedServiceId,
     setServicesUpdated,
   };
   return (

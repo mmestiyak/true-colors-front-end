@@ -1,10 +1,8 @@
 import axios from "axios";
 
 import React, { useState } from "react";
-import { useServices } from "../../contexts/ServicesContext";
 
 const AddService = () => {
-  const { setServicesUpdated } = useServices();
   const [formInfo, setFormInfo] = useState();
   const [uploadedFile, setUploadedFile] = useState();
   const handleInputBlur = (e) => {
@@ -19,20 +17,20 @@ const AddService = () => {
   };
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const { title, description } = formInfo;
+    const { title, description, price } = formInfo;
     const formData = new FormData();
     if (!uploadedFile)
       return alert(
         "Image is uploading! please wait a bit and hit submit button"
       );
     formData.append("title", title);
+    formData.append("price", price);
     formData.append("description", description);
     formData.append("serviceImage", uploadedFile);
     (async () => {
       try {
         await axios.post("http://localhost:8888/services", formData);
         alert("Service Added Successfully");
-        setServicesUpdated("updated from add service");
       } catch (err) {
         console.log(err);
       }
@@ -69,6 +67,18 @@ const AddService = () => {
             ></textarea>
           </div>
 
+          <div class="field my-3">
+            <label class="label">Price</label>
+            <div class="control">
+              <input
+                required
+                class="input"
+                onBlur={handleInputBlur}
+                type="number"
+                name="price"
+              />
+            </div>
+          </div>
           <div class="file is-success my-5">
             <label class="file-label">
               <input

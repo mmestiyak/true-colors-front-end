@@ -1,7 +1,10 @@
 import React from "react";
 const About = () => {
   return (
-    <div className="section is-medium is-flex is-justify-content-center">
+    <div
+      id="about"
+      className="section is-medium is-flex is-justify-content-center"
+    >
       <div className="columns is-desktop is-justify-content-center">
         <div className="column is-5">
           <div className="card is-shadowless " style={{ height: "100%" }}>

@@ -9,9 +9,9 @@ const UserLoggedIn = ({ name, image, logout }) => {
   return (
     <div class="navbar-item has-dropdown has-dropdown-with-icons has-divider has-user-avatar is-hoverable">
       <a class="navbar-link is-arrowless">
-        <div class="is-user-avatar">
+        {/* <div class="is-user-avatar">
           <img src={image} alt={name} className="p-2 navbar-img" />
-        </div>
+        </div> */}
         <div class="is-user-name">
           <span>{name}</span>
         </div>

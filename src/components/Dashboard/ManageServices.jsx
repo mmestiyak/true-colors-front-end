@@ -1,4 +1,5 @@
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React from "react";
@@ -15,8 +16,8 @@ const ManageServices = () => {
           id: id,
         },
       });
+      setServicesUpdated((prevState) => !prevState);
       alert("Service Deleted Successfully");
-      setServicesUpdated("updated from manage services");
     } catch (err) {
       console.log(err);
     }
