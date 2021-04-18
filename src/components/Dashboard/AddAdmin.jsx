@@ -10,7 +10,9 @@ const AddAdmin = () => {
 
     (async () => {
       try {
-        await axios.post("http://localhost:8888/admins", { email });
+        await axios.post("https://true-colorss.herokuapp.com/admins", {
+          email,
+        });
         alert("Admin Added");
         form.reset();
       } catch (err) {

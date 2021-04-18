@@ -9,7 +9,9 @@ export const ServicesProvider = ({ children }) => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get("http://localhost:8888/services");
+        const response = await axios.get(
+          "https://true-colorss.herokuapp.com/services"
+        );
         setServices(response.data);
       } catch (err) {
         console.log(err);

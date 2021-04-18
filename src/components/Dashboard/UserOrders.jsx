@@ -9,9 +9,12 @@ const UserOrders = () => {
   useEffect(() => {
     (async () => {
       try {
-        const orders = await axios.post("http://localhost:8888/orders/user", {
-          email: currentUser.email,
-        });
+        const orders = await axios.post(
+          "https://true-colorss.herokuapp.com/orders/user",
+          {
+            email: currentUser.email,
+          }
+        );
         setOrders(orders.data);
       } catch (err) {
         console.log(err);

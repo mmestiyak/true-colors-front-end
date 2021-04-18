@@ -29,7 +29,10 @@ const AddService = () => {
     formData.append("serviceImage", uploadedFile);
     (async () => {
       try {
-        await axios.post("http://localhost:8888/services", formData);
+        await axios.post(
+          "https://true-colorss.herokuapp.com/services",
+          formData
+        );
         alert("Service Added Successfully");
       } catch (err) {
         console.log(err);

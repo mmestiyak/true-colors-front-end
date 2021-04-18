@@ -24,7 +24,7 @@ const AdminOrdersRecords = ({
   const getSelectedValue = (e, id) => {
     (async () => {
       try {
-        axios.put("http://localhost:8888/orders", {
+        axios.put("https://true-colorss.herokuapp.com/orders", {
           id,
           status: e.target.value,
         });

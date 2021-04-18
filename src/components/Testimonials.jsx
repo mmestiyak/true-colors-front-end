@@ -10,7 +10,9 @@ const Testimonials = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get("http://localhost:8888/reviews");
+        const response = await axios.get(
+          "https://true-colorss.herokuapp.com/reviews"
+        );
         await setTestimonials(response.data);
       } catch (err) {
         console.log(err);

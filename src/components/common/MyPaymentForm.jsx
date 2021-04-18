@@ -66,7 +66,7 @@ const MyPaymentForm = ({ serviceName, price, setCurrentComponent }) => {
       (async () => {
         try {
           const response = await axios.post(
-            "http://localhost:8888/orders",
+            "https://true-colorss.herokuapp.com/orders",
             data
           );
           alert("Thank you, Order Completed!");

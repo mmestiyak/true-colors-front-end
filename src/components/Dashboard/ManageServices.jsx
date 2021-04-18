@@ -11,7 +11,7 @@ const ManageServices = () => {
   const { services, setServicesUpdated } = useServices();
   const handleDelete = async (id) => {
     try {
-      axios.delete("http://localhost:8888/services", {
+      axios.delete("https://true-colorss.herokuapp.com/services", {
         data: {
           id: id,
         },

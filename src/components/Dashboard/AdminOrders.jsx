@@ -7,7 +7,9 @@ const AdminOrders = () => {
   useEffect(() => {
     (async () => {
       try {
-        const orders = await axios.get("http://localhost:8888/orders");
+        const orders = await axios.get(
+          "https://true-colorss.herokuapp.com/orders"
+        );
         setOrders(orders.data);
         console.log(orders);
       } catch (err) {

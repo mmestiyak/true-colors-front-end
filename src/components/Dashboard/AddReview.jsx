@@ -28,7 +28,10 @@ const AddReview = () => {
     formData.append("file", uploadedFile);
     (async () => {
       try {
-        await axios.post("http://localhost:8888/reviews", formData);
+        await axios.post(
+          "https://true-colorss.herokuapp.com/reviews",
+          formData
+        );
         alert("Thank you! Review Done!");
       } catch (err) {
         console.log(err);

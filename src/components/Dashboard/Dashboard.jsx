@@ -24,7 +24,7 @@ const Dashboard = () => {
     (async () => {
       try {
         const response = await axios.post(
-          "http://localhost:8888/admins/checkIsAdmin",
+          "https://true-colorss.herokuapp.com/admins/checkIsAdmin",
           { email: currentUser.email }
         );
         setIsAdmin(response.data);
