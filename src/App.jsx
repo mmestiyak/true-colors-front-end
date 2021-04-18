@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import "./styles/app.scss";
 import { Route, Switch } from "react-router";
 
@@ -33,6 +32,7 @@ const App = () => {
               <Login />
             </Route>
           </Switch>
+
           <Footer />
         </ServicesProvider>
       </AuthProvider>
