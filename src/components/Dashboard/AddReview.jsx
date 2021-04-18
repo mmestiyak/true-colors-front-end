@@ -48,12 +48,12 @@ const AddReview = () => {
       >
         <div className="columns">
           <div className="column is-6">
-            <div class="field">
-              <label class="label">Name</label>
-              <div class="control">
+            <div className="field">
+              <label className="label">Name</label>
+              <div className="control">
                 <input
                   required
-                  class="input"
+                  className="input"
                   onBlur={handleInputBlur}
                   type="text"
                   name="name"
@@ -62,12 +62,12 @@ const AddReview = () => {
             </div>
           </div>
           <div className="column is-6">
-            <div class="field">
-              <label class="label">Title</label>
-              <div class="control">
+            <div className="field">
+              <label className="label">Title</label>
+              <div className="control">
                 <input
                   required
-                  class="input"
+                  className="input"
                   onBlur={handleInputBlur}
                   type="text"
                   name="title"
@@ -78,38 +78,38 @@ const AddReview = () => {
         </div>
         <div className="columns is-flex is-align-items-flex-end">
           <div className="column is-6">
-            <label class="label">Review</label>
+            <label className="label">Review</label>
             <textarea
               required
-              class="textarea is-small "
+              className="textarea is-small "
               placeholder="Write Review"
               name="review"
               onBlur={handleInputBlur}
             ></textarea>
           </div>
           <div className="column is-6">
-            <div class="file is-success">
-              <label class="file-label">
+            <div className="file is-success">
+              <label className="file-label">
                 <input
-                  class="file-input"
+                  className="file-input"
                   onChange={handleFileUpload}
                   accept="image/*"
                   type="file"
                   name="file"
                   required
                 />
-                <span class="file-cta">
-                  <span class="file-icon">
-                    <i class="fas fa-upload"></i>
+                <span className="file-cta">
+                  <span className="file-icon">
+                    <i className="fas fa-upload"></i>
                   </span>
-                  <span class="file-label">Upload Image</span>
+                  <span className="file-label">Upload Image</span>
                 </span>
               </label>
             </div>
           </div>
         </div>
-        <div class="control">
-          <button type="submit" class="button is-success is-medium">
+        <div className="control">
+          <button type="submit" className="button is-success is-medium">
             Submit
           </button>
         </div>

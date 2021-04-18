@@ -9,8 +9,8 @@ const NavItem = ({ text, icon, setCurrentComponent }) => {
         setCurrentComponent(text);
       }}
     >
-      <span class="icon-text  my-5">
-        <span class="icon">
+      <span className="icon-text  my-5">
+        <span className="icon">
           <FontAwesomeIcon icon={icon} />
         </span>
         <span>{text}</span>

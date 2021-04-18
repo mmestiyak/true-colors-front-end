@@ -16,6 +16,7 @@ const Services = () => {
           <div className="columns is-variable is-6 is-flex-wrap-wrap">
             {services.map((service) => (
               <Service
+                key={service._id}
                 title={service.title}
                 description={service.description}
                 image={service.image}

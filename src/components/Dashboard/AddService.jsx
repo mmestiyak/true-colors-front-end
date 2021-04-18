@@ -47,12 +47,12 @@ const AddService = () => {
         style={{ width: "90%" }}
         action=""
       >
-        <div class="field">
-          <label class="label">Title</label>
-          <div class="control">
+        <div className="field">
+          <label className="label">Title</label>
+          <div className="control">
             <input
               required
-              class="input"
+              className="input"
               onBlur={handleInputBlur}
               type="text"
               name="title"
@@ -60,50 +60,50 @@ const AddService = () => {
           </div>
         </div>
 
-        <div class="field">
-          <label class="label">Description</label>
-          <div class="control">
+        <div className="field">
+          <label className="label">Description</label>
+          <div className="control">
             <textarea
               onBlur={handleInputBlur}
               name="description"
-              class="textarea is-small"
+              className="textarea is-small"
             ></textarea>
           </div>
 
-          <div class="field my-3">
-            <label class="label">Price</label>
-            <div class="control">
+          <div className="field my-3">
+            <label className="label">Price</label>
+            <div className="control">
               <input
                 required
-                class="input"
+                className="input"
                 onBlur={handleInputBlur}
                 type="number"
                 name="price"
               />
             </div>
           </div>
-          <div class="file is-success my-5">
-            <label class="file-label">
+          <div className="file is-success my-5">
+            <label className="file-label">
               <input
-                class="file-input"
+                className="file-input"
                 onChange={handleFileUpload}
                 accept="image/*"
                 type="file"
                 name="serviceImg"
                 required
               />
-              <span class="file-cta">
-                <span class="file-icon">
-                  <i class="fas fa-upload"></i>
+              <span className="file-cta">
+                <span className="file-icon">
+                  <i className="fas fa-upload"></i>
                 </span>
-                <span class="file-label">Upload Image</span>
+                <span className="file-label">Upload Image</span>
               </span>
             </label>
           </div>
         </div>
 
-        <div class="control my-5">
-          <button type="submit" class="button is-success ">
+        <div className="control my-5">
+          <button type="submit" className="button is-success ">
             Submit
           </button>
         </div>

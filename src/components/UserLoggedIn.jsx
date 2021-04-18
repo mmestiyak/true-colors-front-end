@@ -7,30 +7,30 @@ const UserLoggedIn = ({ name, image, logout }) => {
     })();
   };
   return (
-    <div class="navbar-item has-dropdown has-dropdown-with-icons has-divider has-user-avatar is-hoverable">
-      <a class="navbar-link is-arrowless">
-        {/* <div class="is-user-avatar">
+    <div className="navbar-item has-dropdown has-dropdown-with-icons has-divider has-user-avatar is-hoverable">
+      <a className="navbar-link is-arrowless">
+        {/* <div className="is-user-avatar">
           <img src={image} alt={name} className="p-2 navbar-img" />
         </div> */}
-        <div class="is-user-name">
+        <div className="is-user-name">
           <span>{name}</span>
         </div>
-        <span class="icon">
-          <i class="mdi mdi-chevron-down"></i>
+        <span className="icon">
+          <i className="mdi mdi-chevron-down"></i>
         </span>
       </a>
-      <div class="navbar-dropdown">
-        <a class="navbar-item is-active">
-          <span class="icon">
-            <i class="mdi mdi-account"></i>
+      <div className="navbar-dropdown">
+        <a className="navbar-item is-active">
+          <span className="icon">
+            <i className="mdi mdi-account"></i>
           </span>
           <span>My Profile</span>
         </a>
 
-        <hr class="navbar-divider" />
-        <a class="navbar-item" onClick={handleLogOut}>
-          <span class="icon">
-            <i class="mdi mdi-logout"></i>
+        <hr className="navbar-divider" />
+        <a className="navbar-item" onClick={handleLogOut}>
+          <span className="icon">
+            <i className="mdi mdi-logout"></i>
           </span>
           <span>Log Out</span>
         </a>

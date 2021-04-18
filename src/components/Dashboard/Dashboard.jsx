@@ -62,10 +62,10 @@ const Dashboard = () => {
               await logout();
               history.push("/");
             }}
-            class="sidebar-nav-link is-clickable"
+            className="sidebar-nav-link is-clickable"
           >
-            <span class="icon-text  my-5">
-              <span class="icon">
+            <span className="icon-text  my-5">
+              <span className="icon">
                 <FontAwesomeIcon icon={faSignOutAlt} />
               </span>
               <span>Logout</span>
@@ -73,12 +73,12 @@ const Dashboard = () => {
           </a>
         </aside>
         <div className="column is-10 p-5">
-          <div class="navbar-menu">
-            <div class="navbar-start">
+          <div className="navbar-menu">
+            <div className="navbar-start">
               <h3 className="title mb-4">{currentComponent}</h3>
             </div>
 
-            <div class="navbar-end">
+            <div className="navbar-end">
               {currentUser && currentUser.displayName}
             </div>
           </div>

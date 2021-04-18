@@ -30,10 +30,10 @@ const AddAdmin = () => {
     >
       <div className="columns my-5">
         <div className="column-6">
-          <div class="field">
-            <div class="control">
+          <div className="field">
+            <div className="control">
               <input
-                class="input"
+                className="input"
                 type="email"
                 required
                 name="email"
@@ -41,9 +41,9 @@ const AddAdmin = () => {
               />
             </div>
           </div>
-          <div class="field">
-            <p class="control">
-              <button type="submit" class="button is-success">
+          <div className="field">
+            <p className="control">
+              <button type="submit" className="button is-success">
                 Add
               </button>
             </p>

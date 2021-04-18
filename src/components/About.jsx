@@ -10,10 +10,7 @@ const About = () => {
           <div className="card is-shadowless " style={{ height: "100%" }}>
             <div className="card-image">
               <figure className="image ">
-                <img
-                  src="http://exqute.egemenerd.com/wp-content/uploads/2019/01/home-banner.jpg"
-                  alt=""
-                />
+                <img src="https://i.ibb.co/hWWy854/about-img.jpg" alt="" />
               </figure>
             </div>
           </div>

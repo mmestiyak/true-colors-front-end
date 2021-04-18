@@ -25,7 +25,7 @@ const UserOrders = () => {
     <div>
       {orders && (
         <table
-          class="table table is-fullwidth
+          className="table table is-fullwidth
    "
         >
           <thead>

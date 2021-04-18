@@ -42,7 +42,7 @@ const AdminOrdersRecords = ({
       <td>{currencyFormatter(servicePrice)}</td>
       <td>{paymentMethod}</td>
       <td>
-        <div class="select is-normal is-arrowless">
+        <div className="select is-normal is-arrowless">
           <select
             name="status"
             onChange={(e) => {

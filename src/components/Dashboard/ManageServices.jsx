@@ -26,7 +26,7 @@ const ManageServices = () => {
     <div>
       {services ? (
         <table
-          class="table table is-fullwidth
+          className="table table is-fullwidth
    "
         >
           <thead>
@@ -54,11 +54,11 @@ const ManageServices = () => {
                     onClick={() => {
                       handleDelete(id);
                     }}
-                    class="icon is-clickable has-text-danger"
+                    className="icon is-clickable has-text-danger"
                   >
                     <FontAwesomeIcon icon={faTrash} />
                   </span>
-                  <span class="icon  px-5 is-clickable has-text-success">
+                  <span className="icon  px-5 is-clickable has-text-success">
                     <FontAwesomeIcon icon={faEdit} />
                   </span>
                 </td>

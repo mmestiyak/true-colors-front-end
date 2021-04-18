@@ -40,8 +40,8 @@ const Testimonials = () => {
               interval={20000}
               className="column is-6"
             >
-              {testimonials.map(({ name, title, review, image }) => (
-                <div>
+              {testimonials.map(({ name, title, review, image, _id }) => (
+                <div key={_id}>
                   <img
                     alt=""
                     src={`data:image/png;base64, ${arrayBufferToBase64(
