@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -6,6 +6,7 @@ import { useAuth } from "../contexts/AuthContext";
 import UserLoggedIn from "./UserLoggedIn";
 const Navbar = () => {
   const { currentUser, logout } = useAuth();
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
     <>
@@ -15,7 +16,10 @@ const Navbar = () => {
             True Colors
           </Link>
           <div
-            className="navbar-burger"
+            className={`navbar-burger ${mobileMenu && `is-active`}`}
+            onClick={() => {
+              setMobileMenu(!mobileMenu);
+            }}
             data-target="navbarExampleTransparentExample"
           >
             <span></span>
@@ -24,7 +28,10 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div id="navbarExampleTransparentExample" className="navbar-menu">
+        <div
+          id="navbarExampleTransparentExample"
+          className={`navbar-menu  ${mobileMenu && `is-active`}`}
+        >
           <div className="navbar-end">
             <HashLink className="navbar-item" smooth to="/#about">
               About

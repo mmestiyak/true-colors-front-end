@@ -4,7 +4,20 @@ import { useHistory } from "react-router";
 import { useServices } from "../contexts/ServicesContext";
 import { arrayBufferToBase64 } from "../util";
 import { useAuth } from "../contexts/AuthContext";
+import { useSpring, animated } from "react-spring";
+const calc = (x, y) => [
+  -(y - window.innerHeight / 2) / 20,
+  (x - window.innerWidth / 2) / 20,
+  1.1,
+];
+const trans = (x, y, s) =>
+  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 const Service = ({ title, description, image, id }) => {
+  const [props, set] = useSpring(() => ({
+    xys: [0, 0, 1],
+    config: { mass: 5, tension: 350, friction: 40 },
+  }));
+
   const { setSelectedServiceId } = useServices();
   const history = useHistory();
   const { currentUser } = useAuth();
@@ -23,17 +36,20 @@ const Service = ({ title, description, image, id }) => {
     })();
   }, []);
   return (
-    <div
+    <animated.div
+      onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+      onMouseLeave={() => set({ xys: [0, 0, 1] })}
+      style={{ transform: props.xys.interpolate(trans) }}
       onClick={() => {
         if (!isAdmin) {
           setSelectedServiceId(id);
           history.push("/dashboard");
         }
       }}
-      className="column is-one-third is-clickable	
+      className="column is-one-third is-clickable	 
 "
     >
-      <div className="card is-flex  is-flex-direction-column is-align-items-center p-5">
+      <div className="card service-card is-flex  is-flex-direction-column is-align-items-center p-5">
         <div className="card-image ">
           <figure
             className="image is-128x128	
@@ -54,7 +70,7 @@ const Service = ({ title, description, image, id }) => {
           </div>
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 };
 

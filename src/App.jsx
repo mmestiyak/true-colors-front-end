@@ -12,6 +12,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import { ServicesProvider } from "./contexts/ServicesContext";
 import Footer from "./components/Footer";
 import PrivateRoute from "./PrivateRoute";
+import Stats from "./components/Stats";
 const App = () => {
   return (
     <>
@@ -21,6 +22,8 @@ const App = () => {
             <Route exact path="/">
               <HeroSection />
               <About />
+              <Stats />
+
               <Services />
               <Testimonials />
             </Route>
