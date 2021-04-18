@@ -9,7 +9,14 @@ const Footer = () => {
           <div class="content has-text-centered">
             <p class="has-text-danger">
               All Right Reserved {new Date().getFullYear()} | Created with 💛 by
-              mmestiyak
+              <a
+                href="https://facebook.com/mmestiyak"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {" "}
+                mmestiyak
+              </a>
             </p>
           </div>
         </div>

@@ -8,11 +8,10 @@ const HeroSection = () => {
       </div>
       <div className="hero-body">
         <div className="columns">
-          <div className="column is-6">
+          <div className="column ">
             <p className="title">Welcome to True Colors</p>
             <p className="subtitle mt-3">
-              Dolore commodo ea excepteur, do irure praetermissum aut enim
-              proident aut laboris, an lorem irure irure commodo.
+              New Color – New Adventures – New Memories.
             </p>
           </div>
         </div>

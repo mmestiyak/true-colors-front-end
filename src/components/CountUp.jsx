@@ -6,7 +6,7 @@ const CountUp = ({ end }) => {
   const { countUp, start } = useCountUp({
     end: end,
     start: 0,
-    duration: 4,
+    duration: 7,
     suffix: "+",
   });
   useEffect(() => {
