@@ -2,8 +2,8 @@
 
 ## A Single Page Full Stack Application powered by MERN Stack Created for Painting Agency
 
-![Deshi fish](https://i.ibb.co/d0Y8hBJ/1.png)
-![Deshi fish](https://i.ibb.co/zNJg5Hq/2.png)
+![True Colors](https://i.ibb.co/d0Y8hBJ/1.png)
+![True Colors](https://i.ibb.co/zNJg5Hq/2.png)
 
 ## Features
 
